@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
+import SubNavigation from "@/components/subnavigation";
+import SubNavigationDesktop from "@/components/subnavigationdesktop";
+import Header from "@/components/header";
+import { ThemeProvider } from "@/components/themeprovider/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const figtree = Figtree({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,11 +22,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${figtree.className} antialiased`}
+        suppressHydrationWarning
       >
-        {children}
+        <div className="relative flex flex-col min-h-screen">
+          <ThemeProvider attribute="class" disableTransitionOnChange>
+            <SubNavigation />
+            <SubNavigationDesktop />
+            <Header />
+            {children}
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );
