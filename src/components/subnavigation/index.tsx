@@ -20,7 +20,6 @@ import {
   Sheet,
   SheetContent,
   SheetClose,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -45,21 +44,19 @@ const SubNavigation = () => {
 
     const handleResize = () => {
       if (mediaQuery.matches) {
-        setSheetOpen(false); // Fecha automaticamente se for ≥ 960px
+        setSheetOpen(false);
       }
     };
 
-    // Adiciona o listener
     mediaQuery.addEventListener("change", handleResize);
 
-    // Remove ao desmontar
     return () => {
       mediaQuery.removeEventListener("change", handleResize);
     };
   }, []);
 
   return (
-    <nav className="sticky top-0 z-20 w-screen min-w-[375px] bg-blue-700 dark:bg-gray-800 32md:hidden">
+    <nav className="sticky top-0 z-20 w-screen min-w-[375px] bg-blue-700 dark:bg-zinc-800 32md:hidden">
       <div className="flex flex-col items-end justify-end px-6 md:hidden">
         <button
           onClick={handleClick}
@@ -68,7 +65,7 @@ const SubNavigation = () => {
           Assine Via WhatsApp
           <FaWhatsapp size={14} className="md:w-4 md:h-4" />
         </button>
-        <Separator className="dark:bg-white h-[1px] w-full bg-blue-900 rounded-full" />
+        <Separator className="dark:bg-gray-300 h-[1px] w-full bg-blue-900 rounded-full" />
       </div>
       <div className="flex flex-row items-center justify-between px-5 py-4 md:px-6">
         {/* Dialog Áreas de Cobertura */}
@@ -141,9 +138,9 @@ const SubNavigation = () => {
               <ChevronRight size={18} strokeWidth={2.2} />
             </button>
           </SheetTrigger>
-          <SheetContent className="fixed z-50 gap-4 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 right-0 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm flex h-svh w-full flex-col overflow-y-auto bg-white p-0 dark:bg-gray-800 md:max-w-[613px]">
+          <SheetContent className="fixed z-50 gap-4 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 right-0 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm flex h-svh w-full flex-col overflow-y-auto bg-white p-0 dark:bg-zinc-800 md:max-w-[613px]">
             <SheetHeader className="flex flex-col space-y-2 text-left">
-              <SheetTitle className="text-lg font-semibold h-16 w-full bg-blue-700 dark:border-b dark:border-white dark:bg-gray-900">
+              <SheetTitle className="text-lg font-semibold h-16 w-full bg-blue-700 dark:border-b dark:border-white dark:bg-zinc-900">
                 <SheetClose className="mx-5 my-[1.375rem] md:mx-14">
                   <h2 className="text-xl leading-5 text-white">
                     Menu Acessível
