@@ -74,10 +74,7 @@ export function HeaderMobile() {
                         </Dialog.Trigger>
                         <Dialog.Portal>
                           <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
-                          <Dialog.Content
-                            style={{ willChange: "transform, opacity" }}
-                            className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-[20.75rem] bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
-                          >
+                          <Dialog.Content className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-[20.75rem] bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight">
                             <Dialog.Title asChild>
                               <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-zinc-900 md:flex ">
                                 <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl py-[1.375rem] px-6 font-semibold leading-5 text-white dark:text-cyan-400">
@@ -154,7 +151,10 @@ export function HeaderMobile() {
                       </Dialog.Trigger>
                       <Dialog.Portal>
                         <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
-                        <Dialog.Content className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-full bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transform transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight">
+                        <Dialog.Content
+                          style={{ willChange: "transform, opacity" }}
+                          className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-full bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transform transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                        >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
                               <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl p-[1.375rem] font-semibold leading-5 text-blue-700 dark:text-cyan-400">
