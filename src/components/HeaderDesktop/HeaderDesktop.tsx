@@ -66,8 +66,8 @@ const HeaderDesktop = () => {
                           A solução para a sua empresa está aqui!
                         </p>
                         <NavigationMenu.Link asChild>
-                          <a
-                            href="/"
+                          <Link
+                            href="/companies"
                             className="group cursor-pointer transition-all duration-500 focus-visible:p-2 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-blue-500 dark:focus-visible:ring-cyan-400 flex w-[14.1rem] flex-row items-center gap-2"
                           >
                             <span className="text-blue-700 font-medium text-base leading-5 group-hover:underline group-hover:text-blue-500 dark:text-cyan-400 dark:group-hover:text-cyan-500">
@@ -78,7 +78,7 @@ const HeaderDesktop = () => {
                               strokeWidth={2.3}
                               className="text-blue-700 group-hover:text-blue-500 dark:text-cyan-400 dark:group-hover:text-cyan-500"
                             />
-                          </a>
+                          </Link>
                         </NavigationMenu.Link>
                       </div>
                       <div className="flex flex-col mt-10">
