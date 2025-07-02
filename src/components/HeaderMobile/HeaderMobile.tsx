@@ -1,11 +1,5 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
 import * as Dialog from "@radix-ui/react-dialog";
-const slideInRight = {
-  hidden: { opacity: 0, x: 200 },
-  visible: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: 200 },
-};
 import { Separator } from "@radix-ui/react-separator";
 import {
   UserRound,
