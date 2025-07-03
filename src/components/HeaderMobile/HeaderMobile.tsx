@@ -38,13 +38,10 @@ export function HeaderMobile() {
                 </button>
               </Dialog.Trigger>
               <Dialog.Portal>
-                <Dialog.Overlay
-                  className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm
-            data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut"
-                />
+                <Dialog.Overlay className="fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut transition-opacity duration-300 ease-in-out" />
                 <Dialog.Content
                   style={{ willChange: "transform, opacity" }}
-                  className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                  className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px]  w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                 >
                   <Dialog.Title asChild>
                     <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-background-dark md:flex">
@@ -63,10 +60,11 @@ export function HeaderMobile() {
                           </button>
                         </Dialog.Trigger>
                         <Dialog.Portal>
-                          <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                          <Dialog.Overlay className="fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut transition-opacity duration-300 ease-in-out" />
+
                           <Dialog.Content
                             style={{ willChange: "transform, opacity" }}
-                            className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-[20.75rem] border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                            className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 sm:max-w-sm md:max-w-[613px] w-full h-[20.75rem] overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                           >
                             <Dialog.Title asChild>
                               <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-zinc-900 md:flex ">
@@ -143,10 +141,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut transition-opacity duration-300 ease-in-out" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
@@ -371,10 +369,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut transition-opacity duration-300 ease-in-out" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex">
@@ -566,10 +564,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut transition-opacity duration-300 ease-in-out" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
@@ -613,10 +611,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut transition-opacity duration-300 ease-in-out" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">

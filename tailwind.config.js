@@ -27,28 +27,22 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      willChange: {
-        transform: "transform",
-        opacity: "opacity",
-        auto: "auto",
-        "transform-opacity": "transform, opacity",
-      },
       keyframes: {
         enterFromRight: {
-          from: { opacity: "0", transform: "translate3d(100%, 0, 0)" },
-          to: { opacity: "1", transform: "translate3d(0, 0, 0)" },
+          from: { opacity: "0", transform: "translateX(100%)" },
+          to: { opacity: "1", transform: "translateX(0)" },
         },
         exitToRight: {
-          from: { opacity: "1", transform: "translate3d(0, 0, 0)" },
-          to: { opacity: "0", transform: "translate3d(100%, 0, 0)" },
+          from: { opacity: "1", transform: "translateX(0)" },
+          to: { opacity: "0", transform: "translateX(100%)" },
         },
         enterFromLeft: {
-          from: { opacity: "0", transform: "translate3d(-100%, 0, 0)" },
-          to: { opacity: "1", transform: "translate3d(0, 0, 0)" },
+          from: { opacity: "0", transform: "translateX(-100%)" },
+          to: { opacity: "1", transform: "translateX(0)" },
         },
         exitToLeft: {
-          from: { opacity: "1", transform: "translate3d(0, 0, 0)" },
-          to: { opacity: "0", transform: "translate3d(-100%, 0, 0)" },
+          from: { opacity: "1", transform: "translateX(0)" },
+          to: { opacity: "0", transform: "translateX(-100%)" },
         },
         scaleIn: {
           from: { opacity: "0", transform: "rotateX(-10deg) scale(0.9)" },
@@ -68,10 +62,10 @@ module.exports = {
         },
       },
       animation: {
-        enterFromRight: "enterFromRight 500ms cubic-bezier(0.22, 1, 0.36, 1)", // easing suave
-        exitToRight: "exitToRight 400ms cubic-bezier(0.4, 0, 0.2, 1)",
-        enterFromLeft: "enterFromLeft 300ms cubic-bezier(0.4, 0, 0.2, 1)",
-        exitToLeft: "exitToLeft 300ms cubic-bezier(0.4, 0, 0.2, 1)",
+        enterFromRight: "enterFromRight 400ms cubic-bezier(0.4, 0, 0.2, 1)",
+        exitToRight: "exitToRight 300ms cubic-bezier(0.4, 0, 0.2, 1)",
+        enterFromLeft: "enterFromLeft 300ms ease-in-out",
+        exitToLeft: "exitToLeft 300ms ease-in-out",
         scaleIn: "scaleIn 200ms ease-in-out",
         scaleOut: "scaleOut 200ms ease-in-out",
         fadeIn: "fadeIn 300ms ease-in-out",
