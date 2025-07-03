@@ -1,6 +1,7 @@
 "use client";
 
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { SubHeaderMobile } from "../SubHeaderMobile/SubHeaderMobile";
 import { HeaderMobile } from "../HeaderMobile/HeaderMobile";
 import HeaderDesktop from "../HeaderDesktop/HeaderDesktop";
 
@@ -9,5 +10,14 @@ export default function HeaderWrapper() {
 
   if (isMobile === null) return null;
 
-  return isMobile ? <HeaderMobile /> : <HeaderDesktop />;
+  return isMobile ? (
+    <>
+      <SubHeaderMobile />
+      <HeaderMobile />
+    </>
+  ) : (
+    <>
+      <HeaderDesktop />
+    </>
+  );
 }
