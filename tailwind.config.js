@@ -62,8 +62,8 @@ module.exports = {
         },
       },
       animation: {
-        enterFromRight: "enterFromRight 300ms ease-in-out",
-        exitToRight: "exitToRight 300ms ease-in-out",
+        enterFromRight: "enterFromRight 400ms cubic-bezier(0.4, 0, 0.2, 1)",
+        exitToRight: "exitToRight 300ms cubic-bezier(0.4, 0, 0.2, 1)",
         enterFromLeft: "enterFromLeft 300ms ease-in-out",
         exitToLeft: "exitToLeft 300ms ease-in-out",
         scaleIn: "scaleIn 200ms ease-in-out",

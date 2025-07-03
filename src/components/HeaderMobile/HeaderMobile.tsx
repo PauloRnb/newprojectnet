@@ -14,23 +14,8 @@ import { IoLogoWhatsapp } from "react-icons/io5";
 import { RiBuilding2Line } from "react-icons/ri";
 import { FaGooglePlay } from "react-icons/fa";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export function HeaderMobile() {
-  const [open, setOpen] = useState(false);
-
-  // Fecha o menu se a largura da tela for maior que 960px
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth >= 960) {
-        setOpen(false);
-      }
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <header className="z-10 flex min-w-[375px] bg-gray-100 flex-col items-center dark:bg-zinc-900 32md:hidden">
       <div className="flex w-full flex-col">
@@ -43,7 +28,7 @@ export function HeaderMobile() {
           </Link>
           <div className="flex items-center">
             {/* MENU PRINCIAPAL */}
-            <Dialog.Root open={open} onOpenChange={setOpen}>
+            <Dialog.Root>
               <Dialog.Trigger asChild>
                 <button
                   aria-label="Abri Menu"
@@ -53,10 +38,13 @@ export function HeaderMobile() {
                 </button>
               </Dialog.Trigger>
               <Dialog.Portal>
-                <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                <Dialog.Overlay
+                  className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm
+            data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut"
+                />
                 <Dialog.Content
                   style={{ willChange: "transform, opacity" }}
-                  className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-full bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                  className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
                 >
                   <Dialog.Title asChild>
                     <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-background-dark md:flex">
@@ -75,10 +63,10 @@ export function HeaderMobile() {
                           </button>
                         </Dialog.Trigger>
                         <Dialog.Portal>
-                          <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                          <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
                           <Dialog.Content
                             style={{ willChange: "transform, opacity" }}
-                            className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-[20.75rem] bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                            className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-[20.75rem] border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
                           >
                             <Dialog.Title asChild>
                               <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-zinc-900 md:flex ">
@@ -155,10 +143,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-full bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
@@ -383,10 +371,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-full bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex">
@@ -578,10 +566,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-full bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
@@ -625,10 +613,10 @@ export function HeaderMobile() {
                         </button>
                       </Dialog.Trigger>
                       <Dialog.Portal>
-                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-[2px] data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
+                        <Dialog.Overlay className="bg-zinc-700/30 fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut" />
                         <Dialog.Content
                           style={{ willChange: "transform, opacity" }}
-                          className="fixed inset-y-0 right-0 z-50 flex flex-col w-full sm:max-w-sm md:max-w-[613px] h-full bg-white dark:bg-zinc-800 shadow-lg overflow-y-auto border-l transition-transform data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
+                          className="fixed z-50 gap-4 shadow-lg inset-y-0 right-0 h-full border-l sm:max-w-sm md:max-w-[613px] w-full transform overflow-y-auto bg-white p-0 transition-all dark:bg-zinc-800 data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight"
                         >
                           <Dialog.Title asChild>
                             <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
