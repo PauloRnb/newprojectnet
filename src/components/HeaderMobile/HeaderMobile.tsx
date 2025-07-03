@@ -44,13 +44,13 @@ export function HeaderMobile() {
                   className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px]  w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                 >
                   <Dialog.Title asChild>
-                    <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-background-dark md:flex">
+                    <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-zinc-900 md:flex">
                       {/* MENU RESIDENCIAL */}
                       <Dialog.Root>
                         <Dialog.Trigger asChild>
                           <button
                             aria-label="Abri Menu"
-                            className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl px-6 py-[1.375rem] font-semibold leading-5 text-white hover:text-gray-200 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-gray-200"
+                            className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl px-6 py-[1.375rem] font-semibold leading-5 text-white hover:text-gray-200 transition-colors duration-200 focus:outline-none focus-visible:text-gray-200"
                           >
                             <h2>Residencial</h2>
                             <span className="sr-only">
@@ -68,7 +68,7 @@ export function HeaderMobile() {
                           >
                             <Dialog.Title asChild>
                               <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-blue-700 dark:bg-zinc-900 md:flex ">
-                                <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl py-[1.375rem] px-6 font-semibold leading-5 text-white dark:text-cyan-400">
+                                <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl py-[1.375rem] px-6 font-semibold leading-5 text-white">
                                   PARA A SUA RESIDÊNCIA
                                 </span>
                                 <Dialog.Close asChild>
@@ -93,9 +93,15 @@ export function HeaderMobile() {
                                 className="shrink-0 dark:bg-white w-full h-[1px] bg-gray-300 my-6"
                               />
                               <div className="flex flex-col gap-6">
-                                <h2 className="text-blue-700 text-base font-semibold dark:text-cyan-400">
-                                  Para Sua Empresa
-                                </h2>
+                                <div className="flex flex-col gap-1">
+                                  <h2 className="text-blue-700 text-base font-semibold dark:text-white">
+                                    Para Sua Empresa
+                                  </h2>
+                                  <Separator
+                                    orientation="horizontal"
+                                    className="shrink-0 dark:bg-white w-10 rounded-full h-[2px] bg-blue-700"
+                                  />
+                                </div>
                                 <Link
                                   href="/companies"
                                   className="cursor-pointer w-fit flex items-center justify-between gap-2 text-lg md:text-xl font-semibold leading-5 text-gray-600 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-700"
@@ -125,7 +131,7 @@ export function HeaderMobile() {
                       Indique e Ganhe
                     </Link>
                   </div>
-                  <div className="flex items-center gap-8 w-full h-14 bg-gray-200 dark:bg-zinc-800 px-6">
+                  <div className="flex items-center gap-8 w-full h-14 bg-gray-200 dark:bg-zinc-900 px-6">
                     {/* MENU ASSINE AGORA */}
                     <Dialog.Root>
                       <Dialog.Trigger asChild>
@@ -147,7 +153,7 @@ export function HeaderMobile() {
                           className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
-                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
+                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white dark:bg-zinc-900 md:flex ">
                               <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl p-[1.375rem] font-semibold leading-5 text-blue-700 dark:text-cyan-400">
                                 ASSINE AGORA
                               </span>
@@ -158,7 +164,7 @@ export function HeaderMobile() {
                                 >
                                   <CircleX
                                     size={28}
-                                    className="text-gray-600"
+                                    className="text-gray-600 dark:text-white"
                                   />
                                 </button>
                               </Dialog.Close>
@@ -354,7 +360,7 @@ export function HeaderMobile() {
                         </Dialog.Content>
                       </Dialog.Portal>
                     </Dialog.Root>
-                    {/* MENU ASSINE ÁREA DO CLIENTE */}
+                    {/* MENU ÁREA DO CLIENTE */}
                     <Dialog.Root>
                       <Dialog.Trigger asChild>
                         <button
@@ -375,7 +381,7 @@ export function HeaderMobile() {
                           className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
-                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex">
+                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white dark:bg-zinc-900 md:flex">
                               <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl p-[1.375rem] font-semibold leading-5 text-blue-700 dark:text-cyan-400">
                                 ÁREA DO CLIENTE
                               </span>
@@ -386,7 +392,7 @@ export function HeaderMobile() {
                                 >
                                   <CircleX
                                     size={28}
-                                    className="text-gray-600"
+                                    className="text-gray-600 dark:text-white"
                                   />
                                 </button>
                               </Dialog.Close>
@@ -570,7 +576,7 @@ export function HeaderMobile() {
                           className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
-                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
+                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white dark:bg-zinc-900 md:flex ">
                               <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl p-[1.375rem] font-semibold leading-5 text-gray-600 dark:text-cyan-400">
                                 INTERNET
                               </span>
@@ -581,7 +587,7 @@ export function HeaderMobile() {
                                 >
                                   <CircleX
                                     size={28}
-                                    className="text-gray-600"
+                                    className="text-gray-600 dark:text-white"
                                   />
                                 </button>
                               </Dialog.Close>
@@ -617,7 +623,7 @@ export function HeaderMobile() {
                           className="fixed z-50 shadow-lg data-[state=open]:animate-enterFromRight data-[state=closed]:animate-exitToRight transition-all duration-500 ease-in-out inset-y-0 right-0 h-full sm:max-w-sm md:max-w-[613px] w-full overflow-y-auto bg-white dark:bg-zinc-800 border-l"
                         >
                           <Dialog.Title asChild>
-                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white border-b border-gray-300 dark:bg-zinc-900 md:flex ">
+                            <h2 className="text-lg font-semibold sticky top-0 z-[2] h-16 w-full bg-white dark:bg-zinc-900 md:flex ">
                               <span className="select-none w-fit flex items-center gap-2 text-lg md:text-xl p-[1.375rem] font-semibold leading-5 text-gray-600 dark:text-cyan-400">
                                 STREAMING
                               </span>
@@ -628,7 +634,7 @@ export function HeaderMobile() {
                                 >
                                   <CircleX
                                     size={28}
-                                    className="text-gray-600"
+                                    className="text-gray-600 dark:text-white"
                                   />
                                 </button>
                               </Dialog.Close>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "./ThemeProvider/ThemeProvider";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import HeaderWrapper from "@/components/HeaderWrapper/HeaderWrapper";
@@ -65,10 +66,12 @@ export default function RootLayout({
         className={`${figtree.className} antialiased`}
         suppressHydrationWarning
       >
-        <div className="relative flex flex-col min-h-screen">
-          <HeaderWrapper />
-          {children}
-        </div>
+        <ThemeProvider>
+          <div className="relative flex flex-col min-h-screen">
+            <HeaderWrapper />
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

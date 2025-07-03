@@ -1,9 +1,11 @@
 "use client";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Separator } from "@radix-ui/react-separator";
-import { CircleX, CirclePlus, ChevronRight } from "lucide-react";
+import { CircleX, CirclePlus } from "lucide-react";
+import { BiUniversalAccess } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import Link from "next/link";
+import { ButtonThemeToggle } from "../ButtonThemeToggle/ButtonThemeToggle";
 
 export function SubHeaderMobile() {
   return (
@@ -39,10 +41,7 @@ export function SubHeaderMobile() {
           <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 z-50 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
 
-            <Dialog.Content
-              style={{ willChange: "transform, opacity" }}
-              className="no-scrollbar fixed left-[50%] top-[50%] z-50 grid max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-gray-200 bg-white shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg h-[15.6875rem] w-[20.9375rem] p-0 px-6 dark:bg-zinc-900 dark:border-gray-500 md:h-[21.125rem] md:w-[34.875rem] md:p-0 md:pl-12 overflow-hidden"
-            >
+            <Dialog.Content className="no-scrollbar fixed left-[50%] top-[50%] z-50 grid max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-gray-200 bg-white shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg h-[15.6875rem] w-[20.9375rem] p-0 px-6 dark:bg-zinc-900 dark:border-gray-500 md:h-[21.125rem] md:w-[34.875rem] md:p-0 md:pl-12 overflow-hidden">
               <main className="flex flex-col space-y-1.5 text-left">
                 <Dialog.Title asChild>
                   <h2 className="text-lg font-semibold leading-none tracking-tight mt-8 md:mt-10">
@@ -90,7 +89,10 @@ export function SubHeaderMobile() {
                   aria-label="Fechar Menu"
                   className="data-[state=open]:bg-gray-600 absolute right-6 top-6 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none focus-visible:opacity-100"
                 >
-                  <CircleX size={28} className="text-gray-600" />
+                  <CircleX
+                    size={28}
+                    className="text-gray-600 dark:text-white"
+                  />
                 </button>
               </Dialog.Close>
             </Dialog.Content>
@@ -104,7 +106,8 @@ export function SubHeaderMobile() {
               className="32md:hidden font-medium flex items-center justify-center gap-1 text-base text-white hover:text-gray-200 dark:text-cyan-400 dark:hover:text-cyan-500 focus:outline-none focus-visible:text-gray-200 transition-colors duration-200"
             >
               Menu Acessível
-              <ChevronRight size={18} strokeWidth={2.2} />
+              <span className="sr-only">Seta Apontando Para a Direita</span>
+              <BiUniversalAccess size={18} viewBox="0 0 23 23" />
             </button>
           </Dialog.Trigger>
           <Dialog.Portal>
@@ -153,6 +156,9 @@ export function SubHeaderMobile() {
                 >
                   Acessibilidade
                 </Link>
+                <div className="mt-10 flex items-center justify-center w-full">
+                  <ButtonThemeToggle />
+                </div>
               </main>
             </Dialog.Content>
           </Dialog.Portal>
