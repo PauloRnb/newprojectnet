@@ -3,7 +3,13 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export function ButtonThemeToggle() {
+interface ButtonThemeToggleProps {
+  className?: string;
+}
+
+export function ButtonThemeToggleMobile({
+  className = "",
+}: ButtonThemeToggleProps) {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -14,7 +20,7 @@ export function ButtonThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="px-4 py-2 text-white bg-blue-700 dark:bg-cyan-400 dark:hover:bg-cyan-500 hover:bg-blue-500 rounded-md w-full focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-cyan-500"
+      className={`font-semibold rounded-md focus:outline-none transition-colors ${className}`}
     >
       {theme === "dark" ? "Modo Claro" : "Modo Escuro"}
     </button>

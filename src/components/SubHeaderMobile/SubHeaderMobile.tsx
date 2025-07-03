@@ -5,7 +5,7 @@ import { CircleX, CirclePlus } from "lucide-react";
 import { BiUniversalAccess } from "react-icons/bi";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import Link from "next/link";
-import { ButtonThemeToggle } from "../ButtonThemeToggle/ButtonThemeToggle";
+import { ButtonThemeToggleMobile } from "../ButtonThemeToggle/ButtonThemeToggleMobile";
 
 export function SubHeaderMobile() {
   return (
@@ -103,7 +103,7 @@ export function SubHeaderMobile() {
           <Dialog.Trigger asChild>
             <button
               aria-label="Abri Menu"
-              className="32md:hidden font-medium flex items-center justify-center gap-1 text-base text-white hover:text-gray-200 dark:text-cyan-400 dark:hover:text-cyan-500 focus:outline-none focus-visible:text-gray-200 transition-colors duration-200"
+              className="32md:hidden font-medium flex items-center justify-center gap-1 text-base transition-colors duration-200 text-white hover:text-gray-200 dark:text-cyan-400 dark:hover:text-cyan-500 focus:outline-none focus-visible:text-gray-200 dark:focus-visible:text-cyan-500"
             >
               Menu Acessível
               <span className="sr-only">Seta Apontando Para a Direita</span>
@@ -134,30 +134,30 @@ export function SubHeaderMobile() {
               <main className="flex flex-col px-5">
                 <a
                   href="#content"
-                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                 >
                   1 - Conteúdo
                 </a>
                 <a
                   href="#menu"
-                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                 >
                   2 - Menu
                 </a>
                 <a
                   href="#footer"
-                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                 >
                   3 - Rodapé
                 </a>
                 <Link
                   href="/acessibility"
-                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                  className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                 >
                   Acessibilidade
                 </Link>
                 <div className="mt-10 flex items-center justify-center w-full">
-                  <ButtonThemeToggle />
+                  <ButtonThemeToggleMobile className="px-4 py-2 text-white dark:text-zinc-800 font-semibold text-base md:text-xl bg-blue-700 dark:bg-cyan-400 dark:hover:bg-cyan-500 hover:bg-blue-500 rounded-md w-full focus:outline-none focus-visible:bg-blue-500 dark:focus-visible:bg-cyan-500" />
                 </div>
               </main>
             </Dialog.Content>

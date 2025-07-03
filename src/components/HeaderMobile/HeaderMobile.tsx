@@ -32,7 +32,7 @@ export function HeaderMobile() {
               <Dialog.Trigger asChild>
                 <button
                   aria-label="Abri Menu"
-                  className="32md:hidden text-gray-600 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 focus:outline-none focus-visible:text-blue-700 transition-colors duration-200"
+                  className="32md:hidden transition-colors duration-200 text-gray-600 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 focus:outline-none focus-visible:text-blue-700 dark:focus-visible:text-cyan-500"
                 >
                   <AlignJustify size={24} />
                 </button>
@@ -50,7 +50,7 @@ export function HeaderMobile() {
                         <Dialog.Trigger asChild>
                           <button
                             aria-label="Abri Menu"
-                            className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl px-6 py-[1.375rem] font-semibold leading-5 text-white hover:text-gray-200 transition-colors duration-200 focus:outline-none focus-visible:text-gray-200"
+                            className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl px-6 py-[1.375rem] font-semibold leading-5 text-white opacity-100 hover:opacity-85 transition-opacity duration-200 focus:outline-none focus-visible:opacity-85"
                           >
                             <h2>Residencial</h2>
                             <span className="sr-only">
@@ -137,7 +137,7 @@ export function HeaderMobile() {
                       <Dialog.Trigger asChild>
                         <button
                           aria-label="Abri Menu"
-                          className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl font-semibold leading-5 text-blue-700 hover:text-blue-500 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                          className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl font-semibold leading-5 text-blue-700 hover:text-blue-500 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                         >
                           <h2>Assine Agora</h2>
                           <span className="sr-only">
@@ -365,7 +365,7 @@ export function HeaderMobile() {
                       <Dialog.Trigger asChild>
                         <button
                           aria-label="Abri Menu"
-                          className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl font-semibold leading-5 text-blue-700 hover:text-blue-500 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                          className="cursor-pointer flex items-center justify-center gap-2 text-lg md:text-xl font-semibold leading-5 text-blue-700 hover:text-blue-500 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                         >
                           <h2>Área do Cliente</h2>
                           <span className="sr-only">
@@ -560,7 +560,7 @@ export function HeaderMobile() {
                       <Dialog.Trigger asChild>
                         <button
                           aria-label="Abri Menu"
-                          className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                          className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                         >
                           <h2>Internet</h2>
                           <span className="sr-only">
@@ -598,7 +598,7 @@ export function HeaderMobile() {
                     </Dialog.Root>
                     <Link
                       href="/combos"
-                      className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                      className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                     >
                       Combos
                     </Link>
@@ -607,7 +607,7 @@ export function HeaderMobile() {
                       <Dialog.Trigger asChild>
                         <button
                           aria-label="Abri Menu"
-                          className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                          className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                         >
                           <h2>Streaming</h2>
                           <span className="sr-only">
@@ -645,7 +645,7 @@ export function HeaderMobile() {
                     </Dialog.Root>
                     <Link
                       href="/combos"
-                      className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500"
+                      className="cursor-pointer flex items-center justify-between gap-2 text-lg md:text-xl pt-10 pb-8 font-semibold leading-5 text-gray-600 border-b border-gray-300 hover:text-blue-700 dark:text-cyan-400 dark:hover:text-cyan-500 transition-colors duration-200 focus:outline-none focus-visible:text-blue-500 dark:focus-visible:text-cyan-500"
                     >
                       Segurança
                     </Link>
